@@ -4,13 +4,13 @@ The goal of this assignment is to determine some form of bias in the Perspective
 
 Throughout this assignment, I tested the Perspective APIs ability to flag comments that contain profane language hidden in acronyms. The goal is to see if the API has some form of age bias because children are the most vulnerable to seeing harmful language on the internet, but many times the language is hidden in the form of acronyms, so it is not detected by platforms. Even commonly used acronyms may contain profane language, and these acronyms are seen in many internet comments, which puts children at risk of being exposed to langauge that they should not see. 
 
-#Hypothesis:
+## Hypothesis:
 
 #### The model will likely score obscenities as much more toxic than other negative language, but, given acronyms that contain obscenities, the model will output a much lower score than the statements that contain the obscenities in full.
 
 If the model is unable to correctly identify acronyms as toxic, this could demonstrate age bias. Online, children are the most vulnerable to being exposed to profanities, and they are much more likely to see these in the form of acronyms. Platforms and developers that use Perspective API should then be aware that the API does not account for profane text that is seen in the form of acronyms.
 
-#Results 
+## Results 
 
 The model accurately predicted that a statement containing an acronym was toxic 0% of the time. Looking at the previous data, the model only predicted that a comment containing an acronym was toxic once, but, in the test data, this comment was marked not toxic. This proves my hypothesis to be true because the model was unable to identify when a comment that contains profanity hidden in a commonly used acronym was toxic. This means that developers using the perspective API need to be aware that users could potentially be exposed to toxic comments if obscenities are hidden in an acronym. This could represent a form of age bias because, on the internet, children are the most vulnerable to seeing inappropriate language, and could be exposed to such obscenities without their parents being aware. 
 
